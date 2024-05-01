@@ -50,14 +50,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
-// .blur {
-//   -webkit-filter: blur(5px); 
-//   filter: blur(2px);
-// }
-// ::v-deep .blur .recipe-preview {
-//   pointer-events: none;
-//   cursor: default;
-// }
+
 .title{
   color:#cfa343;
   font-weight: bolder;

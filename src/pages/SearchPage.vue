@@ -146,7 +146,6 @@ export default {
       searchClicked: false,
       errors: [],
       search_url_:"",
-
     };
   },
   mounted() {
@@ -167,8 +166,6 @@ export default {
   methods: {
     async extractParameters(url) {
       let returns="";
-      //const params = {};
-      console.log("url:" +url)
       const queryString = url.substring(url.indexOf('?') + 1);
       const paramStrings = queryString.split('&');
       for (let i = 0; i < paramStrings.length-2 ; i++) {
@@ -207,8 +204,6 @@ export default {
           search_url = search_url + "&number=" + this.form.selected_num
       }
       search_url = search_url + "&instructionsRequired=true&addRecipeInformation=true"
-
-      console.log(search_url)
       return search_url
     },
     
@@ -221,8 +216,6 @@ export default {
         this.searchClicked = true;
         this.$root.store.last_search(this.search_url_);
         if (this.$root.store.username){   
-          //this.last=this.$root.store.search_url_.substring(this.$root.store.search_url_.indexOf('query=')+6).substring(0,this.$root.store.search_url_.substring(this.$root.store.search_url_.indexOf('query=')+6).indexOf('&'));
-          //this.last=extractParameters(this.$root.store.search_url_);
           let queryString=this.$root.store.search_url_;
           this.last=this.$root.store.search_url_.substring(queryString.indexOf('?')+1, queryString.indexOf('&instructionsRequired')).replace(/&/g, ', ')
           this.last = this.last.startsWith(", ") ? this.last.slice(2) : this.last;

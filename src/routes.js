@@ -42,16 +42,6 @@ const routes = [
     name: "myfamilyrecipes",
     component: () => import("./pages/MyFamilyRecipesPage"),
   },
-  // {
-  //   path: "/prepareRecipe",
-  //   name: "PrepareRecipe",
-  //   component: () => import("./pages/PrepareRecipePage"),
-  // },
-  // {
-  //   path: "/meal",
-  //   name: "meal",
-  //   component: () => import("./pages/MealPage"),
-  // },
   {
     path: "/users/CreateRecipe",
     name: "create",
